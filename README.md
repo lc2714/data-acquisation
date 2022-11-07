@@ -1,20 +1,3 @@
 # data-acquisation
 # code:
-uni="AIzaSyC_Qn3eqEK3C7w01-PdQX3FZ3dG0F8Moco"
-from apiclient.discovery import build
-resource=build("customsearch",'v1',developerKey=uni).cse()
-images_storagecabinet=[]
-for i in range(1,100,10):
-result=resource.list(q='storage cabinets', cx='75cadc003536d4ee3',searchType='image', start=i).execute()
-images_storagecabinet += result['items']
-len(images_storagecabinet)
-for item in images_storagecabinet:
-print(item['title'],item['link'])
-images_totes=[]
-for i in range(1,100,10):
-result=resource.list(q='totes', cx='75cadc003536d4ee3',searchType='image', start=i).execute()
-images_totes += result['items']
-len(images_storagecabinet)
-for item in images_storagecabinet:
-print(item['title'],item['link'])
- 
+https://colab.research.google.com/drive/1dj_ss4Gk6k9nGV948NC9VP_DKI8Ra8JO?usp=sharing
